@@ -1,0 +1,8 @@
+build/
+dist/
+tmp/
+*.class
+*.log
+*.pdf
+bookings.csv
+~$*.docx
