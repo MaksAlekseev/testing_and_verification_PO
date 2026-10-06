@@ -8,7 +8,7 @@ ID: TEXT-001
 Фактический результат: False для всех трёх вызовов (строка сравнивается с обратной без приведения к одному регистру)
 Название падающего теста: tests/test_text_tools.py::test_is_palindrome_ignores_letter_case[Racecar]; ::[Aba]; ::[AbBa]
 Серьёзность (Blocker/Critical/Major/Minor/Trivial): Major
-Статус (Open/Fixed/Closed): Closed
+Итоговый статус: Closed
 
 Среда: Python 3.12.3, pytest, pytest-cov.
 Команда запуска исходной версии (text_tools.py из bc0c325 + tests/test_text_tools.py):
