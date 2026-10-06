@@ -1,0 +1,71 @@
+# Мутационное тестирование `text_tools.py` (тестировщик: Артем)
+
+Версия модуля: исправленная, коммит 8a9b03d (после TEXT-001).
+Среда: Python 3.12.3, pytest 9.1.1, pytest-cov 7.1.0, Cosmic Ray 8.7.0.
+
+## Выбор инструмента (ограничение MutPy)
+
+Предложенный в методичке MutPy 0.6.1 на Python 3.12 не запускается:
+
+```
+mut.py --target text_tools --unit-test tests.test_text_tools --runner pytest -m
+AttributeError: module 'importlib' has no attribute 'find_loader'
+```
+
+Это ошибка совместимости самого MutPy (`importlib.find_loader` удалён в Python 3.12),
+результатов мутационного анализа этот запуск не дал. Использован автоматический
+инструмент **Cosmic Ray** (операторы `core/*`, все мутанты генерируются и запускаются
+инструментом; ручных мутаций нет). Замену MutPy нужно согласовать с преподавателем.
+
+## Команды (из папки `testing_practice_2`)
+
+```
+pip install cosmic-ray
+cosmic-ray init reports/mutation/text_tools/cosmic-ray.toml session.sqlite
+cosmic-ray baseline reports/mutation/text_tools/cosmic-ray.toml
+cosmic-ray exec reports/mutation/text_tools/cosmic-ray.toml session.sqlite
+cr-report session.sqlite --show-diff
+cr-rate session.sqlite
+```
+
+Всего сгенерировано **21 мутант** (6 NumberReplacer, 7 замен `==` на другой оператор
+сравнения, 8 замен/удалений унарного минуса в срезах `[::-1]`).
+
+## Результаты
+
+| Запуск | Набор тестов | Мутантов | Убито | Выжило | Доля выживших |
+|---|---|---:|---:|---:|---:|
+| 1. Контрольный (`cosmic-ray-minimal.toml`) | 5 тестов: по одному обычному на функцию | 21 | 16 | 5 | 23,81% |
+| 2. Итоговый (`cosmic-ray.toml`) | все 53 теста `tests/test_text_tools.py` | 21 | 21 | 0 | 0,00% |
+
+Полный вывод с диффами мутантов: `run1_minimal_tests_output.txt`, `run2_full_tests_output.txt`.
+
+**Важно про честность «до / после».** Основной набор из 53 тестов был написан сразу
+(до мутационного этапа) и сразу убил все 21 мутант, поэтому усиливать его было нечем.
+Запуск 1 — контрольный эксперимент: он показывает, что инструмент действительно
+находит выживших, и объясняет, какие тесты за что отвечают. Это не история
+доработки набора.
+
+## Анализ выживших мутантов (контрольный запуск 1)
+
+Все 5 выживших находятся в `is_palindrome`; тест `test_is_palindrome_accepts_lowercase_palindromes`
+проверяет только палиндромы (`racecar`, `level`, `abba`).
+
+| Мутант | Изменение | Почему выжил | Какой тест убивает |
+|---|---|---|---|
+| `Eq_LtE` | `==` → `<=` | для палиндрома строка равна обратной, `<=` тоже истинно | `test_is_palindrome_rejects_non_palindromes[abca]` |
+| `Eq_GtE` | `==` → `>=` | то же | `test_is_palindrome_rejects_non_palindromes[hello]` |
+| `Eq_IsNot` | `==` → `is not` | для разных объектов-строк `is not` истинно | любой тест с ожидаемым `False` |
+| `USub_UAdd` (2-й) | `[::-1]` → `[::+1]` | палиндром не меняется при развороте, как и без него | `test_is_palindrome_rejects_non_palindromes` |
+| `Delete_USub` (2-й) | `[::-1]` → `[::1]` | то же | `test_is_palindrome_rejects_non_palindromes` |
+
+Вывод: тесты только на «положительный» результат пропускают мутации сравнения и среза.
+Для функций, возвращающих `bool`, нужны и ожидаемые `True`, и ожидаемые `False`.
+
+## Ограничения
+
+- Набор операторов Cosmic Ray `core` не мутирует строковые литералы и вызовы методов
+  (`.lower()`, `.split()`, `.replace(" ", "")`, множество `"aeiou"`). Поэтому 100% убитых
+  означает «убиты все 21 сгенерированные мутанты», а не полную проверку всех возможных ошибок.
+- Результат относится только к `text_tools.py` версии 8a9b03d.
+- На Windows Cosmic Ray запускается тем же способом; файл `session.sqlite` в репозиторий не добавлялся.
