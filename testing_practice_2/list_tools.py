@@ -1,8 +1,4 @@
-"""List tools module for Practical Work 2.
-
-The module intentionally contains one seeded defect for the peer-testing
-exercise. The tester should discover it from the agreed contract and tests.
-"""
+"""List tools module for Practical Work 2."""
 
 
 def sum_numbers(numbers: list[int | float]) -> int | float:
@@ -17,7 +13,7 @@ def max_number(numbers: list[int | float]) -> int | float:
     """Return the largest item; raise ValueError for an empty list."""
     if not numbers:
         raise ValueError("max_number() requires a non-empty list")
-    result = 0
+    result = numbers[0]
     for number in numbers:
         if number > result:
             result = number
