@@ -6,7 +6,11 @@ def count_vowels(text: str) -> int:
     return sum(1 for char in text.lower() if char in vowels)
 
 def is_palindrome(text: str) -> bool:
-    return text == text[::-1]
+    """
+    Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+    """
+    text_lower = text.lower()
+    return text_lower == text_lower[::-1]
 
 def count_words(text: str) -> int:
     return len(text.split())
