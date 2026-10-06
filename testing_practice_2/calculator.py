@@ -27,4 +27,4 @@ def divide(a: int | float, b: int | float) -> float:
 
 def absolute_value(number: int | float) -> int | float:
     """Return the non-negative magnitude of a number."""
-    return number if number >= 0 else number
+    return abs(number)
