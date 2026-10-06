@@ -1,11 +1,11 @@
 ID: LIST-001
 Название: max_number возвращает неверный максимум для списков с отрицательными числами
-Модуль и версия/коммит: list_tools.py, main commit ae41962430b88a2542fc6e448baa8c1070582413
+Модуль и версия/коммит: list_tools.py, ошибка в ae41962430b88a2542fc6e448baa8c1070582413; исправление проверено в f8684c35e8020b7ef93ce1cc3bfa5a822018d22c
 Автор: Артем
 Тестировщик: Катя
 Шаги или вызов функции: вызвать max_number([-5, -2, -9]) и max_number([-4])
 Ожидаемый результат: -2 для первого вызова и -4 для второго
-Фактический результат: 0 для обоих вызовов
-Название падающего теста: test_max_number_handles_list_with_only_negative_values; test_max_number_handles_single_item
+Фактический результат: до исправления возвращалось 0 для обоих вызовов; после исправления получены -2 и -4
+Название падающего теста: test_max_number_handles_list_with_only_negative_values; test_max_number_handles_single_item (после исправления оба теста прошли)
 Серьёзность (Blocker/Critical/Major/Minor/Trivial): Major
-Статус (Open/Fixed/Closed): Open
+Статус (Open/Fixed/Closed): Closed
