@@ -32,4 +32,4 @@ def square(n: int) -> int:
 
 def last_digit(n: int) -> int:
     """Вернуть последнюю цифру абсолютного значения целого числа n."""
-    return n % 10
+    return abs(n) % 10
