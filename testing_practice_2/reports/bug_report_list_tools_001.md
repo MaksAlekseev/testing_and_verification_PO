@@ -8,4 +8,4 @@ ID: LIST-001
 Фактический результат: до исправления возвращалось 0 для обоих вызовов; после исправления получены -2 и -4
 Название падающего теста: test_max_number_handles_list_with_only_negative_values; test_max_number_handles_single_item (после исправления оба теста прошли)
 Серьёзность (Blocker/Critical/Major/Minor/Trivial): Major
-Статус (Open/Fixed/Closed): Closed
+Итоговый статус: Closed
