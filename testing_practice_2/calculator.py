@@ -1,12 +1,10 @@
-"""Simple calculator module for Practical Work 2.
-
-The module intentionally contains one seeded defect for the peer-testing
-exercise. The tester should discover it from the agreed contract and tests.
-"""
+"""Simple calculator operations for Practical Work 2."""
 
 
-def add(a, b):
+def add(a: int | float, b: int | float) -> int | float:
+    """Return the sum of two numbers."""
     return a + b
+
 
 def subtract(a: int | float, b: int | float) -> int | float:
     """Return the difference a - b."""
