@@ -23,6 +23,7 @@
 - `docs/calculator_contract.md` — контракт калькулятора.
 - `docs/TEAM_GUIDE.md` — общий план и отдельные инструкции участникам.
 - `docs/AI_AGENT_TASKS.md` — готовое ТЗ для ИИ-агентов команды.
+- `docs/NEXT_STEPS.md` — актуальные персональные пункты, оставшиеся каждому.
 - `reports/coordination.md` — общий статус этапов и шаблон баг-репорта.
 - `requirements.txt` — инструменты команды.
 
