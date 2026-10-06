@@ -5,10 +5,8 @@ exercise. The tester should discover it from the agreed contract and tests.
 """
 
 
-def add(a: int | float, b: int | float) -> int | float:
-    """Return the sum of two numbers."""
+def add(a, b):
     return a + b
-
 
 def subtract(a: int | float, b: int | float) -> int | float:
     """Return the difference a - b."""
