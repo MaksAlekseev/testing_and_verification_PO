@@ -1,0 +1,242 @@
+{
+  "summary": {
+    "total": 15,
+    "zapped": 13,
+    "survived": 2,
+    "timeout": 0,
+    "error": 0,
+    "pardoned": 0,
+    "percentage": 86.66666666666667
+  },
+  "files": {
+    "C:\\Users\\user\\AppData\\Local\\Temp\\testing_and_verification_PO_katya_retest_20261006\\testing_practice_2\\list_tools.py": {
+      "total": 15,
+      "zapped": 13,
+      "survived": 2,
+      "percentage": 86.66666666666667
+    }
+  },
+  "results": [
+    {
+      "gremlin_id": "list_tools_44d3_g001",
+      "file_path": "list_tools.py",
+      "line_number": 9,
+      "status": "zapped",
+      "operator": "return",
+      "description": "return value to None",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_sum_numbers_returns_zero_for_empty_list",
+        "tests/test_list_tools.py::test_sum_numbers_does_not_change_original_list",
+        "tests/test_list_tools.py::test_sum_numbers_includes_repeated_items",
+        "tests/test_list_tools.py::test_sum_numbers_returns_sum_for_mixed_numbers"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g002",
+      "file_path": "list_tools.py",
+      "line_number": 14,
+      "status": "zapped",
+      "operator": "boolean",
+      "description": "not x to x",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_max_number_raises_value_error_for_empty_list",
+        "tests/test_list_tools.py::test_max_number_handles_single_item",
+        "tests/test_list_tools.py::test_max_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_max_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_max_number_returns_largest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g003",
+      "file_path": "list_tools.py",
+      "line_number": 18,
+      "status": "survived",
+      "operator": "comparison",
+      "description": "> to >=",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_max_number_handles_single_item",
+        "tests/test_list_tools.py::test_max_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_max_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_max_number_returns_largest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g004",
+      "file_path": "list_tools.py",
+      "line_number": 18,
+      "status": "zapped",
+      "operator": "comparison",
+      "description": "> to <",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_max_number_handles_single_item",
+        "tests/test_list_tools.py::test_max_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_max_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_max_number_returns_largest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g005",
+      "file_path": "list_tools.py",
+      "line_number": 20,
+      "status": "zapped",
+      "operator": "return",
+      "description": "return value to None",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_max_number_handles_single_item",
+        "tests/test_list_tools.py::test_max_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_max_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_max_number_returns_largest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g006",
+      "file_path": "list_tools.py",
+      "line_number": 25,
+      "status": "zapped",
+      "operator": "boolean",
+      "description": "not x to x",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_min_number_raises_value_error_for_empty_list",
+        "tests/test_list_tools.py::test_min_number_handles_single_item",
+        "tests/test_list_tools.py::test_min_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_min_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_min_number_returns_smallest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g007",
+      "file_path": "list_tools.py",
+      "line_number": 29,
+      "status": "survived",
+      "operator": "comparison",
+      "description": "< to <=",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_min_number_handles_single_item",
+        "tests/test_list_tools.py::test_min_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_min_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_min_number_returns_smallest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g008",
+      "file_path": "list_tools.py",
+      "line_number": 29,
+      "status": "zapped",
+      "operator": "comparison",
+      "description": "< to >",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_min_number_handles_single_item",
+        "tests/test_list_tools.py::test_min_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_min_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_min_number_returns_smallest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g009",
+      "file_path": "list_tools.py",
+      "line_number": 31,
+      "status": "zapped",
+      "operator": "return",
+      "description": "return value to None",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_min_number_handles_single_item",
+        "tests/test_list_tools.py::test_min_number_does_not_change_original_list",
+        "tests/test_list_tools.py::test_min_number_handles_list_with_only_negative_values",
+        "tests/test_list_tools.py::test_min_number_returns_smallest_value"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g010",
+      "file_path": "list_tools.py",
+      "line_number": 38,
+      "status": "zapped",
+      "operator": "arithmetic",
+      "description": "% to //",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_count_even_returns_zero_when_there_are_no_even_values",
+        "tests/test_list_tools.py::test_count_even_counts_zero_and_negative_even_values",
+        "tests/test_list_tools.py::test_count_even_does_not_change_original_list"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g011",
+      "file_path": "list_tools.py",
+      "line_number": 38,
+      "status": "zapped",
+      "operator": "comparison",
+      "description": "== to !=",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_count_even_returns_zero_when_there_are_no_even_values",
+        "tests/test_list_tools.py::test_count_even_counts_zero_and_negative_even_values",
+        "tests/test_list_tools.py::test_count_even_does_not_change_original_list"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g012",
+      "file_path": "list_tools.py",
+      "line_number": 38,
+      "status": "zapped",
+      "operator": "boundary",
+      "description": "boundary shift +/-1",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_count_even_returns_zero_when_there_are_no_even_values",
+        "tests/test_list_tools.py::test_count_even_counts_zero_and_negative_even_values",
+        "tests/test_list_tools.py::test_count_even_does_not_change_original_list"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g013",
+      "file_path": "list_tools.py",
+      "line_number": 38,
+      "status": "zapped",
+      "operator": "boundary",
+      "description": "boundary shift +/-1",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_count_even_returns_zero_when_there_are_no_even_values",
+        "tests/test_list_tools.py::test_count_even_counts_zero_and_negative_even_values",
+        "tests/test_list_tools.py::test_count_even_does_not_change_original_list"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g014",
+      "file_path": "list_tools.py",
+      "line_number": 40,
+      "status": "zapped",
+      "operator": "return",
+      "description": "return value to None",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_count_even_returns_zero_for_empty_list",
+        "tests/test_list_tools.py::test_count_even_returns_zero_when_there_are_no_even_values",
+        "tests/test_list_tools.py::test_count_even_counts_zero_and_negative_even_values",
+        "tests/test_list_tools.py::test_count_even_does_not_change_original_list"
+      ]
+    },
+    {
+      "gremlin_id": "list_tools_44d3_g015",
+      "file_path": "list_tools.py",
+      "line_number": 45,
+      "status": "zapped",
+      "operator": "return",
+      "description": "return value to None",
+      "killing_test": "unknown",
+      "selected_tests": [
+        "tests/test_list_tools.py::test_reverse_numbers_does_not_change_original_list",
+        "tests/test_list_tools.py::test_reverse_numbers_handles_single_item",
+        "tests/test_list_tools.py::test_reverse_numbers_returns_empty_list_for_empty_input",
+        "tests/test_list_tools.py::test_reverse_numbers_reverses_order_in_new_list"
+      ]
+    }
+  ]
+}

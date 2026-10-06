@@ -120,3 +120,11 @@ def test_count_even_does_not_change_original_list():
     count_even(source)
 
     assert source == [0, -2, 3]
+
+
+def test_max_number_handles_repeated_largest_values():
+    assert max_number([2, 5, 5, 3]) == 5
+
+
+def test_min_number_handles_repeated_smallest_values():
+    assert min_number([2, 1, 1, 3]) == 1
