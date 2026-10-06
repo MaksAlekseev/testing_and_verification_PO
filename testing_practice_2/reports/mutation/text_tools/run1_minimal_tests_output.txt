@@ -1,0 +1,348 @@
+[job-id] 4797ac1611294b30a313a7f0c4750527
+text_tools.py core/ReplaceComparisonOperator_Eq_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower != text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] d9bbff870d7349fc8abfa2b4cd6bf406
+text_tools.py core/ReplaceComparisonOperator_Eq_Lt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower < text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 6349881571bd4150bef4e9e970e768a6
+text_tools.py core/ReplaceComparisonOperator_Eq_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower <= text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 1a69221f4585464eadf675b313cdb6be
+text_tools.py core/ReplaceComparisonOperator_Eq_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower > text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 22832847c9c5458bb8c50777e072c81c
+text_tools.py core/ReplaceComparisonOperator_Eq_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower >= text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 4b40d76322804341b882bde8b26f2768
+text_tools.py core/ReplaceComparisonOperator_Eq_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower is text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 534a085159bf498dac8e25bfa27effe0
+text_tools.py core/ReplaceComparisonOperator_Eq_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower is not text_lower[::-1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 5857ad3528bb4199a6286324a41f3105
+text_tools.py core/ReplaceUnaryOperator_USub_UAdd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -1,5 +1,5 @@
+ def reverse_text(text: str) -> str:
+-    return text[::-1]
++    return text[::+1]
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+============
+[job-id] 55ddcf7bd306400c9bdef2644976aa79
+text_tools.py core/ReplaceUnaryOperator_USub_UAdd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower == text_lower[::+1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] dc8f43014d9a405c907d93110dae2e31
+text_tools.py core/ReplaceUnaryOperator_USub_Invert 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -1,5 +1,5 @@
+ def reverse_text(text: str) -> str:
+-    return text[::-1]
++    return text[::~1]
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+============
+[job-id] dce75552166744f9845892fb9406e42b
+text_tools.py core/ReplaceUnaryOperator_USub_Invert 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower == text_lower[::~1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] eac6bb4769384d0d8483b51bf0f7e9da
+text_tools.py core/ReplaceUnaryOperator_USub_Not 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -1,5 +1,5 @@
+ def reverse_text(text: str) -> str:
+-    return text[::-1]
++    return text[::not 1]
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+============
+[job-id] 8b71d2ddf43b49c687e3b451f1c84dde
+text_tools.py core/ReplaceUnaryOperator_USub_Not 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower == text_lower[::not 1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 820151a5373f4e9483e7fdaebffcdcd4
+text_tools.py core/ReplaceUnaryOperator_Delete_USub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -1,5 +1,5 @@
+ def reverse_text(text: str) -> str:
+-    return text[::-1]
++    return text[::1]
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+============
+[job-id] 4a4e1388f6d541c79966054644cd7934
+text_tools.py core/ReplaceUnaryOperator_Delete_USub 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower == text_lower[::1]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] adb9fa35b1c64a3aa6f513dfc525074b
+text_tools.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -1,5 +1,5 @@
+ def reverse_text(text: str) -> str:
+-    return text[::-1]
++    return text[::- 2]
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+============
+[job-id] 977173576d7943d8862caa9ab5acc429
+text_tools.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -1,5 +1,5 @@
+ def reverse_text(text: str) -> str:
+-    return text[::-1]
++    return text[::- 0]
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+============
+[job-id] 81eb3767006345bcb8e3ce73859cba11
+text_tools.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -3,7 +3,7 @@
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+-    return sum(1 for char in text.lower() if char in vowels)
++    return sum( 2 for char in text.lower() if char in vowels)
+ 
+ def is_palindrome(text: str) -> bool:
+     """
+============
+[job-id] 07bb798b2f95400288b00eed785491b0
+text_tools.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -3,7 +3,7 @@
+ 
+ def count_vowels(text: str) -> int:
+     vowels = set("aeiou")
+-    return sum(1 for char in text.lower() if char in vowels)
++    return sum( 0 for char in text.lower() if char in vowels)
+ 
+ def is_palindrome(text: str) -> bool:
+     """
+============
+[job-id] 8d8a5808e2e941599597dd313a1cefdd
+text_tools.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower == text_lower[::- 2]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+[job-id] 74be125740b74cb9adfb5e1b321cdb38
+text_tools.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/text_tools.py
++++ b/text_tools.py
+@@ -10,7 +10,7 @@
+     Проверяет палиндром, игнорируя регистр, но учитывая пробелы и знаки.
+     """
+     text_lower = text.lower()
+-    return text_lower == text_lower[::-1]
++    return text_lower == text_lower[::- 0]
+ 
+ def count_words(text: str) -> int:
+     return len(text.split())
+============
+total jobs: 21
+complete: 21 (100.00%)
+surviving mutants: 5 (23.81%)

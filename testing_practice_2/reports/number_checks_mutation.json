@@ -1,0 +1,323 @@
+{
+  "tool": "pytest-gremlins",
+  "version": "1.11.0",
+  "python": "3.12.5",
+  "pytest": "9.1.1",
+  "target": "number_checks.py",
+  "summary": {
+    "total": 22,
+    "zapped": 22,
+    "survived": 0,
+    "timeout": 0,
+    "error": 0,
+    "pardoned": 0,
+    "percentage": 100.0
+  },
+  "mutations": [
+    {
+      "id": "number_checks_f090_g001",
+      "line": 9,
+      "status": "zapped",
+      "operator": "arithmetic",
+      "change": "% to //",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_even[-3-False]",
+        "tests/test_number_checks.py::test_is_even[-4-True]",
+        "tests/test_number_checks.py::test_is_even[0-True]",
+        "tests/test_number_checks.py::test_is_even[100-True]",
+        "tests/test_number_checks.py::test_is_even[7-False]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g002",
+      "line": 9,
+      "status": "zapped",
+      "operator": "comparison",
+      "change": "== to !=",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_even[-3-False]",
+        "tests/test_number_checks.py::test_is_even[-4-True]",
+        "tests/test_number_checks.py::test_is_even[0-True]",
+        "tests/test_number_checks.py::test_is_even[100-True]",
+        "tests/test_number_checks.py::test_is_even[7-False]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g003",
+      "line": 9,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_even[-3-False]",
+        "tests/test_number_checks.py::test_is_even[-4-True]",
+        "tests/test_number_checks.py::test_is_even[0-True]",
+        "tests/test_number_checks.py::test_is_even[100-True]",
+        "tests/test_number_checks.py::test_is_even[7-False]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g004",
+      "line": 9,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_even[-3-False]",
+        "tests/test_number_checks.py::test_is_even[-4-True]",
+        "tests/test_number_checks.py::test_is_even[0-True]",
+        "tests/test_number_checks.py::test_is_even[100-True]",
+        "tests/test_number_checks.py::test_is_even[7-False]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g005",
+      "line": 9,
+      "status": "zapped",
+      "operator": "return",
+      "change": "return value to None",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_even[-3-False]",
+        "tests/test_number_checks.py::test_is_even[-4-True]",
+        "tests/test_number_checks.py::test_is_even[0-True]",
+        "tests/test_number_checks.py::test_is_even[100-True]",
+        "tests/test_number_checks.py::test_is_even[7-False]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g006",
+      "line": 14,
+      "status": "zapped",
+      "operator": "comparison",
+      "change": "> to >=",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_positive[-1-False]",
+        "tests/test_number_checks.py::test_is_positive[0-False]",
+        "tests/test_number_checks.py::test_is_positive[1-True]",
+        "tests/test_number_checks.py::test_is_positive[25-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g007",
+      "line": 14,
+      "status": "zapped",
+      "operator": "comparison",
+      "change": "> to <",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_positive[-1-False]",
+        "tests/test_number_checks.py::test_is_positive[0-False]",
+        "tests/test_number_checks.py::test_is_positive[1-True]",
+        "tests/test_number_checks.py::test_is_positive[25-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g008",
+      "line": 14,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_positive[-1-False]",
+        "tests/test_number_checks.py::test_is_positive[0-False]",
+        "tests/test_number_checks.py::test_is_positive[1-True]",
+        "tests/test_number_checks.py::test_is_positive[25-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g009",
+      "line": 14,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_positive[-1-False]",
+        "tests/test_number_checks.py::test_is_positive[0-False]",
+        "tests/test_number_checks.py::test_is_positive[1-True]",
+        "tests/test_number_checks.py::test_is_positive[25-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g010",
+      "line": 14,
+      "status": "zapped",
+      "operator": "return",
+      "change": "return value to None",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_positive[-1-False]",
+        "tests/test_number_checks.py::test_is_positive[0-False]",
+        "tests/test_number_checks.py::test_is_positive[1-True]",
+        "tests/test_number_checks.py::test_is_positive[25-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g011",
+      "line": 23,
+      "status": "zapped",
+      "operator": "comparison",
+      "change": "== to !=",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple_raises_for_zero_divisor"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g012",
+      "line": 23,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple_raises_for_zero_divisor"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g013",
+      "line": 23,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple_raises_for_zero_divisor"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g014",
+      "line": 25,
+      "status": "zapped",
+      "operator": "arithmetic",
+      "change": "% to //",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g015",
+      "line": 25,
+      "status": "zapped",
+      "operator": "comparison",
+      "change": "== to !=",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g016",
+      "line": 25,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g017",
+      "line": 25,
+      "status": "zapped",
+      "operator": "boundary",
+      "change": "boundary shift +/-1",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g018",
+      "line": 25,
+      "status": "zapped",
+      "operator": "return",
+      "change": "return value to None",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_is_multiple[-12--4-True]",
+        "tests/test_number_checks.py::test_is_multiple[-12-3-True]",
+        "tests/test_number_checks.py::test_is_multiple[0-5-True]",
+        "tests/test_number_checks.py::test_is_multiple[12--5-False]",
+        "tests/test_number_checks.py::test_is_multiple[12-3-True]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g019",
+      "line": 30,
+      "status": "zapped",
+      "operator": "arithmetic",
+      "change": "* to /",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_square[-4-16]",
+        "tests/test_number_checks.py::test_square[0-0]",
+        "tests/test_number_checks.py::test_square[100000000000000000000-10000000000000000000000000000000000000000]",
+        "tests/test_number_checks.py::test_square[3-9]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g020",
+      "line": 30,
+      "status": "zapped",
+      "operator": "return",
+      "change": "return value to None",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_square[-4-16]",
+        "tests/test_number_checks.py::test_square[0-0]",
+        "tests/test_number_checks.py::test_square[100000000000000000000-10000000000000000000000000000000000000000]",
+        "tests/test_number_checks.py::test_square[3-9]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g021",
+      "line": 35,
+      "status": "zapped",
+      "operator": "arithmetic",
+      "change": "% to //",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_last_digit[-120-0]",
+        "tests/test_number_checks.py::test_last_digit[-123-3]",
+        "tests/test_number_checks.py::test_last_digit[0-0]",
+        "tests/test_number_checks.py::test_last_digit[120-0]",
+        "tests/test_number_checks.py::test_last_digit[7-7]"
+      ]
+    },
+    {
+      "id": "number_checks_f090_g022",
+      "line": 35,
+      "status": "zapped",
+      "operator": "return",
+      "change": "return value to None",
+      "selected_tests": [
+        "tests/test_number_checks.py::test_last_digit[-120-0]",
+        "tests/test_number_checks.py::test_last_digit[-123-3]",
+        "tests/test_number_checks.py::test_last_digit[0-0]",
+        "tests/test_number_checks.py::test_last_digit[120-0]",
+        "tests/test_number_checks.py::test_last_digit[7-7]"
+      ]
+    }
+  ]
+}
+

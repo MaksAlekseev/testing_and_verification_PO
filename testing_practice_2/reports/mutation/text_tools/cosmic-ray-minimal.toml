@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "text_tools.py"
+timeout = 10.0
+excluded-modules = []
+test-command = "python -m pytest -x -q tests/test_text_tools.py -k \"test_reverse_text_reverses_regular_word or test_count_vowels_counts_lowercase_vowels or test_is_palindrome_accepts_lowercase_palindromes or test_count_words_counts_words_separated_by_one_space or test_remove_spaces_removes_spaces_between_words\""
+
+[cosmic-ray.distributor]
+name = "local"
