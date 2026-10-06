@@ -1,17 +1,11 @@
-test session starts =================================================
-platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0
-rootdir: C:\Users\HP\testing_and_verification_PO\testing_practice_2
-plugins: platformdirs-4.12.3, cov-7.1.0
-collected 5 items
+# Повторная проверка `calculator.py`
 
-tests\test_calculator.py .....                                                                                   [100%]
+**Тестировщик:** Витя. **Среда:** Windows, Python 3.12.10, pytest 9.1.1, pytest-cov 7.1.0.
 
-=================================================== tests coverage ====================================================
-__________________________________ coverage: platform win32, python 3.12.10-final-0 ___________________________________
+```powershell
+python -m pytest tests/test_calculator.py --cov=calculator --cov-report=term-missing
+```
 
-Name            Stmts   Miss  Cover
------------------------------------
-calculator.py      10      0   100%
------------------------------------
-TOTAL              10      0   100%
-================================================== 5 passed in 0.08s ==================================================
+**Результат Вити:** 5 passed; покрытие `calculator.py` — 100% (10/10 операторов). Проверка подтвердила исправление `BUG-CALC-001`.
+
+После приведения аннотаций и документации `add` к финальному виду Максим повторно выполнил ту же команду в Windows, Python 3.12.5: **5 passed**, покрытие — **100% (10/10)**.
