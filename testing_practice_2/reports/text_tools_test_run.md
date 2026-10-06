@@ -10,7 +10,7 @@ python -m pytest tests/test_text_tools.py --cov=text_tools --cov-report=term-mis
 
 Результат: **53 теста, 50 прошли, 3 упали**. Покрытие операторов: 100% (11/11).
 Падают только `test_is_palindrome_ignores_letter_case[Racecar]`, `[Aba]`, `[AbBa]`.
-Описание дефекта — в `bug_report_text_tools_001.md` (TEXT-001, статус Open).
+Описание дефекта — в `bug_report_text_tools_001.md` (TEXT-001).
 
 Фрагмент фактического вывода:
 
